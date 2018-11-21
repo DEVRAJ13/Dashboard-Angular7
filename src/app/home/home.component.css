@@ -1,0 +1,61 @@
+.example-container {
+    height: calc( 100vh);
+}
+
+.drawer-style{
+    background-color:#2d2a2a;
+    color:#fff;
+}
+
+.item-style{
+    color:#fff;
+}
+
+:host /deep/ mat-list-item.item-style.mat-list-item {
+    /* border-bottom: 1px solid #fdd303; */
+    cursor: pointer;
+}
+
+:host /deep/ mat-list-item.item-style.mat-list-item:hover {
+    opacity: 1;
+    background-color: #545151;
+  }
+
+  .active .me{
+    background:#545151;
+  }
+
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-card{
+    background-color: #2d2a2a;
+    color: #ffbc00;
+  }
+
+  .subtitle{
+    color: #b7b4b4;
+    margin-top: -16px !important;
+    font-size: 12px;
+  }
+
+  .btn {
+    text-align: center;
+    display: block;
+    margin-top: 19px;
+  }
+
+  .img-style{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .main {
+      padding: 16px;
+  }
