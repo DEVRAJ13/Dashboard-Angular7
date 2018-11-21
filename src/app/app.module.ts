@@ -15,11 +15,19 @@ import {
   MatToolbarModule,
   MatCardModule
 } from '@angular/material';
+import { AddNotesComponent } from './add-notes/add-notes.component';
+import { SettingsComponent } from './settings/settings.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AddNotesComponent,
+    SettingsComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

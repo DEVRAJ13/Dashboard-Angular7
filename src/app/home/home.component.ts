@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
+
 
 
 @Component({
@@ -7,17 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  options = [{
-    "icon":"polymer",
-    "title": "App Engine"
-  },{
-    "icon":"settings",
-    "title":"Settings"
-  }]
 
-  constructor() { }
+  constructor(public route: Router) { }
 
   ngOnInit() {
+  }
+
+  async addNotesPage() {
+    this.route.navigate(['create-notes']);
   }
 
 }

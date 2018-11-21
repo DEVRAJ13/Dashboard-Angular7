@@ -1,29 +1,3 @@
-.example-container {
-    height: calc( 100vh);
-}
-
-.drawer-style{
-    background-color:#2d2a2a;
-    color:#fff;
-}
-
-.item-style{
-    color:#fff;
-}
-
-:host /deep/ mat-list-item.item-style.mat-list-item {
-    /* border-bottom: 1px solid #fdd303; */
-    cursor: pointer;
-}
-
-:host /deep/ mat-list-item.item-style.mat-list-item:hover {
-    opacity: 1;
-    background-color: #545151;
-  }
-
-  .active .me{
-    background:#545151;
-  }
 
   .example-icon {
     padding: 0 14px;
