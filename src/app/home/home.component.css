@@ -37,12 +37,13 @@
 
   .row1{
     padding: 16px;
+    margin-top: 30px;
   }
 
   .add-circle{
     text-align: center;
-              display: block;
-              margin-top: 20px;
+    display: block;
+    margin-top: 20px;
   }
 
   .card-one{

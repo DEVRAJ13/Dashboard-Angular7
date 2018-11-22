@@ -7,7 +7,7 @@ import { DialogOverviewExampleDialogComponent } from '../dialog/dialog-overview-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   public myDate: Date;
@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.utcTime();
   }
+
+  
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
