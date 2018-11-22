@@ -1,40 +1,34 @@
-<!-- <div class="main">
-    <form class="example-form">
+<div>
+    <h1 mat-dialog-title>Feed</h1>
+    <div mat-dialog-content>
+        <p>Give me your notes information.</p>
         <mat-form-field class="example-full-width" [floatLabel]="'never'">
             <input matInput placeholder="Define subject">
         </mat-form-field>
-
         <table class="example-full-width" cellspacing="0">
             <tr>
                 <td>
-
                     <mat-form-field>
-                        <mat-select placeholder="Choose course" [formControl]="courseControl" required>
+                        <mat-select placeholder="Choose course">
                             <mat-option>--</mat-option>
                             <mat-option *ngFor="let course of courses" [value]="course">
                                 {{course.name}}
                             </mat-option>
                         </mat-select>
-                        <mat-error *ngIf="courseControl.hasError('required')">Please choose an course</mat-error>
-                        <mat-hint>{{courseControl.value?.sound}}</mat-hint>
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field>
-                        <mat-select placeholder="Choose category" [formControl]="categoryControl" required>
+                        <mat-select placeholder="Choose category">
                             <mat-option>--</mat-option>
                             <mat-option *ngFor="let category of categorys" [value]="category">
                                 {{category.name}}
                             </mat-option>
                         </mat-select>
-                        <mat-error *ngIf="categoryControl.hasError('required')">Please choose an category</mat-error>
-                        <mat-hint>{{categoryControl.value?.sound}}</mat-hint>
                     </mat-form-field>
                 </td>
             </tr>
         </table>
-
-
         <table class="example-full-width" cellspacing="0">
             <tr>
                 <td>
@@ -47,11 +41,11 @@
                         <input matInput placeholder="Source">
                     </mat-form-field>
                 </td>
-
             </tr>
         </table>
-    </form>
-
-
-
-</div> -->
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Add</button>
+    </div>
+</div>

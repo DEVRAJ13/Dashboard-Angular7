@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { IImage } from '../modules/slideshow/IImage';
-import * as moment from 'moment';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DialogOverviewExampleDialogComponent } from '../dialog/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -9,64 +10,65 @@ import * as moment from 'moment';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  myDate: Date;
-  today: any;
-
-  imageUrls: (string | IImage)[] = [
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56748793/dbohn_170625_1801_0018.0.0.jpg', caption: 'The first slide', href: '#config' },
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => alert('custom click function') },
-    { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56789263/akrales_170919_1976_0104.0.jpg', caption: 'Apple TV', href: 'https://www.apple.com/' },
-    'https://cdn.vox-cdn.com/uploads/chorus_image/image/56674755/mr_pb_is_the_best.0.jpg',
-    { url: 'assets/kitties.jpg', backgroundSize: 'contain', backgroundPosition: 'center' }
+  public myDate: Date;
+  public today: any;
+  public imageUrls: (string | IImage)[] = [
+    { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56748793/dbohn_170625_1801_0018.0.0.jpg', caption: '', href: '#config' },
+    { url: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/9278671/jbareham_170917_2000_0124.jpg', clickAction: () => alert('') },
+    { url: 'https://cdn.vox-cdn.com/uploads/chorus_image/image/56789263/akrales_170919_1976_0104.0.jpg', caption: '', href: '#config' },
   ];
+  public height = '400px';
+  public minHeight;
+  public arrowSize = '30px';
+  public showArrows = true;
+  public disableSwiping = false;
+  public autoPlay = true;
+  public autoPlayInterval = 3333;
+  public stopAutoPlayOnSlide = true;
+  public debug = false;
+  public backgroundSize = 'cover';
+  public backgroundPosition = 'center center';
+  public backgroundRepeat = 'no-repeat';
+  public showDots = true;
+  public dotColor = '#FFF';
+  public showCaptions = true;
+  public captionColor = '#FFF';
+  public captionBackground = 'rgba(0, 0, 0, .35)';
+  public lazyLoad = false;
+  public hideOnNoSlides = false;
+  public width = '100%';
 
-  height: string = '400px';
-  minHeight: string;
-  arrowSize: string = '30px';
-  showArrows: boolean = true;
-  disableSwiping: boolean = false;
-  autoPlay: boolean = true;
-  autoPlayInterval: number = 3333;
-  stopAutoPlayOnSlide: boolean = true;
-  debug: boolean = false;
-  backgroundSize: string = 'cover';
-  backgroundPosition: string = 'center center';
-  backgroundRepeat: string = 'no-repeat';
-  showDots: boolean = true;
-  dotColor: string = '#FFF';
-  showCaptions: boolean = true;
-  captionColor: string = '#FFF';
-  captionBackground: string = 'rgba(0, 0, 0, .35)';
-  lazyLoad: boolean = false;
-  hideOnNoSlides: boolean = false;
-  width: string = '100%';
-
-  constructor(public route: Router) { }
+  constructor(public route: Router, public dialog: MatDialog) { }
 
   ngOnInit() {
-    // // adding an image url dynamically.
-    // setTimeout(() => {
-    //   console.log('adding an image url dynamically.');
-    //   this.imageUrls.push('https://cdn-images-1.medium.com/max/2000/1*Nccd2ofdArlXF7v58UK94Q.jpeg');
-    // }, 2000);
-
     this.utcTime();
   }
 
-  async addNotesPage() {
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
+      width: '450px',
+      data: { dialog_type: 'service', name: '' }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  addNotesPage(): void {
     this.route.navigate(['create-notes']);
   }
 
-
   utcTime(): void {
-    setInterval(() => {         //replaced function() by ()=>
+    setInterval(() => {
       const date = new Date().getHours();
       const houre = new Date().getMinutes();
       const second = new Date().getSeconds();
       this.today = new Date().getDate();
-      var time = date + ":" + houre + ":" + second;
+      const time = date + ':' + houre + ':' + second;
       this.myDate = JSON.parse(JSON.stringify(time));
     }, 1000);
   }
-
 }
+
+
+

@@ -12,6 +12,9 @@
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "component-class-suffix": false,
+        "eofline": false,
+        "no-trailing-whitespace": false
     }
 }

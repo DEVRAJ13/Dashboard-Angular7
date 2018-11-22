@@ -1,4 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+
+
+// export interface Courses {
+//   name: string;
+//   id: number;
+// }
+
+// export interface Categorys {
+//   name: string;
+//   id: number;
+// }
 
 @Component({
   selector: 'app-add-notes',
@@ -6,11 +18,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-notes.component.css']
 })
 export class AddNotesComponent implements OnInit {
+  courseControl = new FormControl('', [Validators.required]);
+  categoryControl = new FormControl('', Validators.required);
+
+
+
 
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

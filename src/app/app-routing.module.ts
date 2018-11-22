@@ -6,21 +6,21 @@ import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {
-    'path':'',
+    'path': '',
     'component': HomeComponent
-},
-{
-  'path':'home',
-  'component': HomeComponent
-},
-{
-  'path':'create-notes',
-  'component':AddNotesComponent
-},
-{
-  'path':'settings',
-  'component':SettingsComponent
-}
+  },
+  {
+    'path': 'home',
+    'component': HomeComponent
+  },
+  {
+    'path': 'create-notes',
+    'component': AddNotesComponent
+  },
+  {
+    'path': 'settings',
+    'component': SettingsComponent
+  }
 ];
 
 @NgModule({
