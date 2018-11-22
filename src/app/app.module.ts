@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 import { 
   MatButtonModule,
@@ -32,6 +33,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SlideshowModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,

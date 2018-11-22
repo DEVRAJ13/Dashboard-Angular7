@@ -1,37 +1,21 @@
-<!-- <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+<mat-drawer-container class="example-container">
+    <mat-drawer class="drawer-style" mode="side" opened>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image">
+                    <img class="img-style" src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg">
+                </div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle class="subtitle">Author</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+        <mat-list role="list" *ngFor="let option of options">
+            <mat-list-item role="listitem" class="item-style" routerLink="/{{option.page}}" routerLinkActive="router-active">
+                <i class="material-icons">{{option.icon}}</i>&nbsp;&nbsp;{{option.title}}
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet>
     </mat-drawer-content>
-  </mat-drawer-container> -->
-
-
-  <mat-drawer-container class="example-container">
-      <mat-drawer class="drawer-style" mode="side" opened>
-          <mat-card class="example-card">
-              <mat-card-header>
-                  <div mat-card-avatar class="example-header-image">
-                      <img class="img-style" src="https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg">
-                  </div>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle class="subtitle">Dog Breed</mat-card-subtitle>
-              </mat-card-header>
-          </mat-card>
-          <!-- <mat-list role="list" *ngFor="let option of options" [class.active]="clicked === option" (click)="clicked = (clicked === option ? option :option)">
-              <mat-list-item role="listitem" class="item-style me">
-                <i class="material-icons">{{option.icon}}</i> &nbsp;&nbsp;{{option.title}}
-              </mat-list-item>
-          </mat-list> -->
-
-          <mat-list role="list" *ngFor="let option of options">
-              <mat-list-item role="listitem" class="item-style" routerLink="/{{option.page}}" routerLinkActive="router-active">
-    
-                    <i class="material-icons">{{option.icon}}</i>&nbsp;&nbsp;{{option.title}}
-          
-              </mat-list-item>
-          </mat-list>
-      </mat-drawer>
-      <mat-drawer-content>
-          <router-outlet></router-outlet>
-      </mat-drawer-content>
-  </mat-drawer-container>
+</mat-drawer-container>

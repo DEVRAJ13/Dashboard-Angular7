@@ -2,6 +2,10 @@
     height: calc( 100vh);
 }
 
+:host /deep/ mat-drawer-content.mat-drawer-content {
+  margin-left: 0px !important;
+}
+
 .drawer-style{
     background-color:#2d2a2a;
     color:#fff;

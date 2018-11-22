@@ -31,5 +31,58 @@
   }
 
   .main {
-      padding: 16px;
+      padding: 0px;
+      margin-left: 185px !important;
+  }
+
+  .row1{
+    padding: 16px;
+  }
+
+  .add-circle{
+    text-align: center;
+              display: block;
+              margin-top: 20px;
+  }
+
+  .card-one{
+    width: 100%;
+      height: 100%;
+      background-color: #f7bc04;
+  }
+
+  .card-two{
+    width: 100%;
+        height: 100%;
+        background-color: #2d2a2a;
+        color: #04f7b4;
+  }
+
+  .card-three{
+    width: 100%;
+    height: 100%;
+    background-color: #860202;
+    color: #fff;
+  }
+
+  .card-four{
+    width: 100%;
+    height: 100%;
+    background-color: #028086;
+    color: #fff;
+  }
+
+  .folder{
+    font-size: 55px;
+    color: #ffffff;
+    margin-top: 2px;
+  }
+
+  .time-txt{
+    font-size: 2rem;
+      text-align: center;
+  }
+
+  .date-txt{
+    text-align: center !important;
   }

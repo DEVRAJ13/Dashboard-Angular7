@@ -14,7 +14,7 @@ export class SidebarComponent implements OnInit {
     "icon":"settings",
     "title":"Settings",
     "page":"settings"
-  }]
+  }];
   constructor() { }
 
   ngOnInit() {

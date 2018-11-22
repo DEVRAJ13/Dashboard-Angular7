@@ -1,13 +1,72 @@
-<app-header></app-header>
 <div class="main">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col">
-            <img style="height: 210px;width: 100%;" src="https://lh3.googleusercontent.com/ddk0vlm3y-ko5-K7_BquWkl_vYdRVMqpgj4ISWe6pWAlyLEGSK0vKfaFVDrq0OPb8pmuhKPK7GQ44QTlTNoIncAm8ECN-CY=s688">
-            <div class="row" class="btn">
-                <button mat-raised-button>Create notes</button>
-            </div>
+  <slideshow #slideshow [imageUrls]="imageUrls" [height]="height" [minHeight]="minHeight" [arrowSize]="arrowSize"
+    [showArrows]="showArrows" [disableSwiping]="disableSwiping" [autoPlay]="autoPlay" [stopAutoPlayOnSlide]="stopAutoPlayOnSlide"
+    [debug]="debug" [backgroundSize]="backgroundSize" [backgroundPosition]="backgroundPosition" [backgroundRepeat]="backgroundRepeat"
+    [showDots]="showDots" [dotColor]="dotColor" [showCaptions]="showCaptions" [captionColor]="captionColor"
+    [captionBackground]="captionBackground" [lazyLoad]="lazyLoad">
+  </slideshow>
+  <div class="row row1">
+    <div class="col-sm-3">
+      <mat-card class="card-one">
+        <div class="row">
+          <div class="col-sm-8">
+            <p>Create your own notes and share.</p>
+          </div>
+          <div class="col-sm-4">
+            <i class="material-icons add-circle">add_circle_outline</i>
+          </div>
         </div>
-        <div class="col"></div>
+      </mat-card>
     </div>
+    <div class="col-sm-3">
+      <mat-card class="card-two">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="time-txt">{{ myDate }}</p>
+          </div>
+          <div class="col-sm-4">
+            <p class="date-txt">
+              DATE
+              <br>
+              {{today}}
+            </p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="col-sm-3">
+      <mat-card class="card-three">
+        <div class="row">
+          <div class="col-sm-6">
+            <i class="material-icons folder">create_new_folder</i>
+          </div>
+          <div class="col-sm-6">
+            <p class="date-txt">
+              NOTES
+              <br>
+              0
+            </p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="col-sm-3">
+      <mat-card class="card-four">
+        <div class="row">
+          <div class="col-sm-6">
+            <i class="material-icons folder">rate_review</i>
+          </div>
+          <div class="col-sm-6">
+            <p class="date-txt">
+              REVIEWS
+              <br>
+              0
+            </p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
 </div>
